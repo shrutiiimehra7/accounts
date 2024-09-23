@@ -55,13 +55,10 @@ function Header() {
   // Load more notifications when the page changes
   useEffect(() => {
     loadMoreNotifications();
+    console.log();
   }, [page]);
 
-  // Add scroll event listener
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  
 
   return (
     <>
